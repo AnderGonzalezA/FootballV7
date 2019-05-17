@@ -11,11 +11,15 @@ public class Conn {
 	private Connection conn;
 
 	public Conn() throws ClassNotFoundException, SQLException {
-		Class.forName("com.mysql.cj.jdbc.Driver");
+		Class.forName("com.mysql.jdbc.Driver");
 
 		String oracleURL = "jdbc:mysql://localhost/football?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 
-		this.conn = DriverManager.getConnection(oracleURL, "dw18", "dw18");
+		String user = "ander";
+		
+		String password = "1234";
+		
+		this.conn = DriverManager.getConnection(oracleURL, user, password);
 	}
 
 	public void insertPlayer(String name, int age, String team_name) throws SQLException {

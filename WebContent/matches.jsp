@@ -27,7 +27,7 @@
 			ArrayList<FootballMatch> footballMatches = conn.selectAllMatches2();
 			String footballMatchesList = "";
 			for (int i=0;i<footballMatches.size();i++) {
-				int id = i;
+				int id = i+1;
 				footballMatchesList = footballMatchesList + "<form action='manageMatch.jsp' method='POST'>" + footballMatches.get(i).getLocalTeam().getTeamName()
 						+ "&nbsp;&nbsp;" + footballMatches.get(i).getGoalsLocal() + "&nbsp;&nbsp;" + footballMatches.get(i).getVisitorTeam().getTeamName() + "&nbsp;&nbsp;"
 						+ footballMatches.get(i).getGoalsVisitor() + "&nbsp;&nbsp;"
