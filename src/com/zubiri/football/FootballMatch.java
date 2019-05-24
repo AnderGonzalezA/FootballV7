@@ -2,10 +2,10 @@ package com.zubiri.football;
 
 public class FootballMatch {
 
-	private Team localTeam;
-	private Team visitorTeam;
-	private int goalsLocal = 0;
-	private int goalsVisitor = 0;
+	public Team localTeam;
+	public Team visitorTeam;
+	public int goalsLocal;
+	public int goalsVisitor;
 
 	public FootballMatch(Team local_team, int local_goals, Team visitor_team, int visitor_goals) {
 		this.setLocalTeam(local_team);
@@ -23,7 +23,7 @@ public class FootballMatch {
 	}
 
 	public Team getVisitorTeam() {
-		return visitorTeam;
+		return this.visitorTeam;
 	}
 
 	public void setVisitorTeam(Team visitorTeam) {
@@ -31,7 +31,7 @@ public class FootballMatch {
 	}
 
 	public int getGoalsLocal() {
-		return goalsLocal;
+		return this.goalsLocal;
 	}
 
 	public void setGoalsLocal(int goalsLocal) {
